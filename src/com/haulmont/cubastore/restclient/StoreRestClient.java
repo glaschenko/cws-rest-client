@@ -78,7 +78,7 @@ public class StoreRestClient {
 
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             HttpGet get = new HttpGet(
-                    "http://localhost:8080/app/rest/v2/queries/cubawebsiteback$InvoiceItem/invoice-items-query?lastCheck=2018-04-10");
+                    "http://localhost:8080/app/rest/v2/queries/cubawebsiteback$Invoice/invoices-query?lastCheck=2018-04-10&bespoke=true");
             get.setHeader("Authorization", "Bearer " + accessToken);
             System.out.println("Executing request " + get.getRequestLine());
 
